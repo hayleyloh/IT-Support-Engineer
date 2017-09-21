@@ -25,30 +25,31 @@ The method of submission is part of the test (usage of Git) - but we won't use `
 
         > Add follow up Questions here as a bulleted list and add an explanation why you ask each question (what do you expect to receive back)
 
-        1.  Example Follow Up Question 1
+        1.  To make sure RDP client software is used to connect to the server by vendor. 
 
-            Explanation for Example Follow Up Question 1
+            Assuming the server is Windows 2012 R2 and listens on TCP Port 3389, thus RDP client may use to connect to the server. 
         
-        1.  Example Follow Up Question 2
+        2.  To provide the vendor with server IP or DNS name
         
-            Explanation for Example Follow Up Question 2
+            To provide vendor with server's IP/DNS as the information is missing out in above. 
 
 
     1.  Write a PowerShell command (assume Windows 2012 R2) to add a new firewall rule on a single server, allowing incoming connections on port `3389` for `TCP` protocol __limited to the public IP of the vendor only__ (assuming we have the public IP of the vendor)
 
     ```powershell
-    # Add Answer Here
+    # New-NetFirewallRule -Profile=public -DisplayName "RDP-192.168.0.100-port3389" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 3389 
 
     ```
 
 1.  How do you list all Computers in an Active Directory Domain using Powershell (output DNSHostname in a table format, no need for `filters` or `SearchBase`)
 
     ```powershell
-    # Add Answer Here
+    # Get-ADComputer -Filter * | Format-Table DNSHostname
 
     ```
 
 1.  What could possible troubleshoot tests be for the following output on a macOS machine. 
+     
     
     For each step, mention what would be your next step
 
@@ -63,5 +64,9 @@ The method of submission is part of the test (usage of Git) - but we won't use `
     Notes:
 
     -   Local machines in the same network can still be pinged by IP
+
+    ans: the computer is having internet connectivity issue. Try to forget wireless network/eternet port if the computer is connected to Wi-Fi/LAN port.if issue persist, the 
+	issue may caused by hardware. 
+	 
 
 Thank you for your time.
