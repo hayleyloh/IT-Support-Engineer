@@ -37,7 +37,7 @@ The method of submission is part of the test (usage of Git) - but we won't use `
     1.  Write a PowerShell command (assume Windows 2012 R2) to add a new firewall rule on a single server, allowing incoming connections on port `3389` for `TCP` protocol __limited to the public IP of the vendor only__ (assuming we have the public IP of the vendor)
 
     ```powershell
-    # New-NetFirewallRule -Profile=public -DisplayName "RDP-192.168.0.100-port3389" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 3389 
+    # New-NetFirewallRule -Profile=public -DisplayName "RDP-192.168.0.100-port3389" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 3389 -LocalAddress 192.168.0.100
 
     ```
 
