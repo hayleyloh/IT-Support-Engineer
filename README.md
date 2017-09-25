@@ -67,6 +67,8 @@ The method of submission is part of the test (usage of Git) - but we won't use `
 
     ans: the computer is having internet connectivity issue. Try to forget wireless network/eternet port if the computer is connected to Wi-Fi/LAN port.if issue persist, the 
 	issue may caused by hardware. 
+	
+     ans2: I will verify the router's PHY mode and make sure the computer is connected to the right wireless protocol and wireless bandwidth which the infrastructure support. 
 	 
 
 Thank you for your time.
